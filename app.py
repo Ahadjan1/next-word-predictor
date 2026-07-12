@@ -117,6 +117,14 @@ st.markdown("""
 
     .stSlider label { color: #3a3a4a !important; font-weight: 500; }
 
+    h5, .stMarkdown h5 {
+        color: #1a1a2e !important;
+        font-weight: 700 !important;
+    }
+    p, .stMarkdown p, label, .stTextInput label {
+        color: #2a2a3a !important;
+    }
+
     div.stButton > button {
         width: 100%;
         border-radius: 10px;
