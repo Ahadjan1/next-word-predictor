@@ -1,0 +1,33 @@
+# ✍️ AI Quote Generator
+
+An LSTM-based text generation app that predicts and continues quotes word-by-word, built with Keras and deployed using Streamlit.
+
+## Overview
+
+This project trains an LSTM language model on a quotes dataset to predict the next word given a starting phrase (seed text), then repeatedly generates words to form a continuation.
+
+## Tech Stack
+
+- Python, TensorFlow/Keras (LSTM)
+- Streamlit (deployment)
+
+## Pipeline
+
+1. Text cleaning (lowercase, punctuation removal)
+2. Tokenization (Keras Tokenizer, vocab_size=10000)
+3. Sequence generation (prefix → next-word pairs)
+4. Padding (pre-padding to max_len)
+5. One-hot encoding of target words
+6. Model: Embedding → LSTM(128) → Dense(softmax)
+7. Trained with categorical_crossentropy, Adam optimizer
+
+## Run Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Author
+
+Ahad Jan — [GitHub](https://github.com/Ahadjan1)
